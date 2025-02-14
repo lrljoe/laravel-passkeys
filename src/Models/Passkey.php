@@ -35,7 +35,7 @@ class Passkey extends Model
                 PublicKeyCredentialSource::class
             ),
             set: fn (PublicKeyCredentialSource $value) => [
-                'credential_id' => utf8_encode($value->publicKeyCredentialId),
+                'credential_id' => mb_convert_encoding($value->publicKeyCredentialId, 'UTF-8'),
                 'data' => $serializer->toJson($value),
             ],
         );

@@ -71,7 +71,7 @@ class FindPasskeyToAuthenticateAction
     {
         $passkeyModel = Config::getPassKeyModel();
 
-        return $passkeyModel::firstWhere('credential_id', utf8_encode($publicKeyCredential->rawId));
+        return $passkeyModel::firstWhere('credential_id', mb_convert_encoding($publicKeyCredential->rawId, 'UTF-8'));
     }
 
     protected function determinePublicKeyCredentialSource(
