@@ -53,7 +53,7 @@ class PasskeysComponent extends Component
 
         $this->clearForm();
     }
-    
+
     public function togglePasskey(int $passkeyId): void
     {
         try {
