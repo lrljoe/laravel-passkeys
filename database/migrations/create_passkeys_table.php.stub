@@ -21,6 +21,7 @@ return new class extends Migration
             $table->text('name');
             $table->text('credential_id');
             $table->json('data');
+            $table->boolean('active')->default(true);
 
             $table->timestamp('last_used_at')->nullable();
             $table->timestamps();

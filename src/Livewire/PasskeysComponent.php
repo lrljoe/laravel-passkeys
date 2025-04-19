@@ -53,6 +53,17 @@ class PasskeysComponent extends Component
 
         $this->clearForm();
     }
+    
+    public function togglePasskey(int $passkeyId): void
+    {
+        try {
+            $passKey = $this->currentUser()->passkeys()->where('id', $passkeyId)->firstOrFail();
+            $passKey->active = ! $passKey->active;
+            $passKey->save();
+        } catch (Throwable $e) {
+            throw $e;
+        }
+    }
 
     public function deletePasskey(int $passkeyId): void
     {

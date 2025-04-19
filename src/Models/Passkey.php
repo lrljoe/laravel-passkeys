@@ -18,10 +18,25 @@ class Passkey extends Model
 
     protected $guarded = [];
 
+    /**
+     * The model's default values for attributes.
+     *
+     * @var array
+     */
+    protected $attributes = [
+        'active' => true,
+    ];
+
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
     public function casts(): array
     {
         return [
             'last_used_at' => 'datetime',
+            'active' => 'boolean',
         ];
     }
 
