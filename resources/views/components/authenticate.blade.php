@@ -20,7 +20,7 @@
     <div onclick="authenticateWithPasskey()">
         @if ($slot->isEmpty())
             <div class="underline cursor-pointer">
-                Authenticate using Passkey
+                {{ __('passkeys::passkeys.authenticate_using_passkey') }}
             </div>
         @else
             {{ $slot }}
