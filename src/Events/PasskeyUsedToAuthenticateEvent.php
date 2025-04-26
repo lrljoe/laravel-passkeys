@@ -2,8 +2,8 @@
 
 namespace Spatie\LaravelPasskeys\Events;
 
-use Spatie\LaravelPasskeys\Models\Passkey;
 use Spatie\LaravelPasskeys\Http\Requests\AuthenticateUsingPasskeysRequest;
+use Spatie\LaravelPasskeys\Models\Passkey;
 
 class PasskeyUsedToAuthenticateEvent
 {

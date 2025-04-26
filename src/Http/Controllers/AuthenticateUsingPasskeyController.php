@@ -53,7 +53,6 @@ class AuthenticateUsingPasskeyController
         return $this;
     }
 
-
     public function logInAuthenticatable(Authenticatable $authenticatable): self
     {
         auth()->login($authenticatable);
