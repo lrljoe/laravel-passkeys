@@ -220,7 +220,7 @@ To customize where the user is redirected after a successful login, you can pass
 
 ### Events
 
-The package fires the `Spatie\LaravelPasskeys\Events\PasskeyUsedToAuthenticateEvent` when a passkey is used to authenticate. It has a property `passkey` that contains the `Passkey` model that was used to authenticate, and `headers` which contains the request headers that were used to authenticate.
+The package fires the `Spatie\LaravelPasskeys\Events\PasskeyUsedToAuthenticateEvent` when a passkey is used to authenticate. It has a property `passkey` that contains the `Passkey` model that was used to authenticate, and `request` which contains the AuthenticateUsingPasskeysRequest.
 
 ## Testing
 
