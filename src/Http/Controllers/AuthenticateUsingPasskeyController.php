@@ -45,7 +45,7 @@ class AuthenticateUsingPasskeyController
         return $this->validPasskeyResponse($request);
     }
 
-    public function logInAuthenticatable(Authenticatable $authenticatable): self
+    protected function logInAuthenticatable(Authenticatable $authenticatable): self
     {
         auth()->login($authenticatable);
 
@@ -54,7 +54,7 @@ class AuthenticateUsingPasskeyController
         return $this;
     }
 
-    public function validPasskeyResponse(Request $request): RedirectResponse
+    protected function validPasskeyResponse(Request $request): RedirectResponse
     {
         $url = Session::has('passkeys.redirect')
             ? Session::pull('passkeys.redirect')
