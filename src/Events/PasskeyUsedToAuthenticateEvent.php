@@ -8,5 +8,6 @@ class PasskeyUsedToAuthenticateEvent
 {
     public function __construct(
         public Passkey $passkey,
+        public array $headers,
     ) {}
 }

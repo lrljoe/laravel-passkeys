@@ -40,7 +40,7 @@ class AuthenticateUsingPasskeyController
 
         $this->logInAuthenticatable($authenticatable);
 
-        event(new PasskeyUsedToAuthenticateEvent($passkey));
+        event(new PasskeyUsedToAuthenticateEvent($passkey, $request->header()));
 
         return $this->validPasskeyResponse($request);
     }
