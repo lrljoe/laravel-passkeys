@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Session;
 use Spatie\LaravelPasskeys\Actions\FindPasskeyToAuthenticateAction;
 use Spatie\LaravelPasskeys\Events\PasskeyUsedToAuthenticateEvent;
 use Spatie\LaravelPasskeys\Http\Requests\AuthenticateUsingPasskeysRequest;
+use Spatie\LaravelPasskeys\Models\Passkey;
 use Spatie\LaravelPasskeys\Support\Config;
 
 class AuthenticateUsingPasskeyController
@@ -40,9 +41,16 @@ class AuthenticateUsingPasskeyController
 
         $this->logInAuthenticatable($authenticatable);
 
-        event(new PasskeyUsedToAuthenticateEvent($passkey));
+        $this->firePasskeyEvent($passkey, $request);
 
         return $this->validPasskeyResponse($request);
+    }
+
+    protected function firePasskeyEvent(Passkey $passkey, AuthenticateUsingPasskeysRequest $request): self
+    {
+        event(new PasskeyUsedToAuthenticateEvent($passkey, $request));
+
+        return $this;
     }
 
     public function logInAuthenticatable(Authenticatable $authenticatable): self
