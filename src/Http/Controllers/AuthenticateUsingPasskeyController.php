@@ -46,13 +46,6 @@ class AuthenticateUsingPasskeyController
         return $this->validPasskeyResponse($request);
     }
 
-    protected function firePasskeyEvent(Passkey $passkey, AuthenticateUsingPasskeysRequest $request): self
-    {
-        event(new PasskeyUsedToAuthenticateEvent($passkey, $request));
-
-        return $this;
-    }
-
     public function logInAuthenticatable(Authenticatable $authenticatable): self
     {
         auth()->login($authenticatable);
@@ -76,5 +69,12 @@ class AuthenticateUsingPasskeyController
         session()->flash('authenticatePasskey::message', __('passkeys::passkeys.invalid'));
 
         return back();
+    }
+
+    protected function firePasskeyEvent(Passkey $passkey, AuthenticateUsingPasskeysRequest $request): self
+    {
+        event(new PasskeyUsedToAuthenticateEvent($passkey, $request));
+
+        return $this;
     }
 }
