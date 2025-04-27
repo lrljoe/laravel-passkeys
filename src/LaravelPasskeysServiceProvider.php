@@ -50,10 +50,10 @@ class LaravelPasskeysServiceProvider extends PackageServiceProvider
     {
         Blade::component('authenticate-passkey', AuthenticatePasskeyComponent::class);
 
-        if (class_exists(\Livewire\Livewire::class))
-        {
+        if (class_exists(\Livewire\Livewire::class)) {
             \Livewire\Livewire::component('passkeys', PasskeysComponent::class);
         }
+
         return $this;
     }
 }
