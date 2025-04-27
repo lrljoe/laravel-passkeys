@@ -9,7 +9,6 @@ use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Spatie\LaravelPasskeys\Http\Components\AuthenticatePasskeyComponent;
 use Spatie\LaravelPasskeys\Http\Controllers\AuthenticateUsingPasskeyController;
 use Spatie\LaravelPasskeys\Http\Controllers\GeneratePasskeyAuthenticationOptionsController;
-use Spatie\LaravelPasskeys\Livewire\PasskeysComponent;
 
 class LaravelPasskeysServiceProvider extends PackageServiceProvider
 {
@@ -50,10 +49,10 @@ class LaravelPasskeysServiceProvider extends PackageServiceProvider
     {
         Blade::component('authenticate-passkey', AuthenticatePasskeyComponent::class);
 
-        if (class_exists(\Livewire\Livewire::class)) {
-            \Livewire\Livewire::component('passkeys', PasskeysComponent::class);
+        if (class_exists(\Livewire\Livewire::class))
+        {
+            \Livewire\Livewire::component('passkeys', \Spatie\LaravelPasskeys\Livewire\PasskeysComponent::class);
         }
-
         return $this;
     }
 }
