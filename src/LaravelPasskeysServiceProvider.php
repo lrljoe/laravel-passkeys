@@ -4,7 +4,6 @@ namespace Spatie\LaravelPasskeys;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Route;
-use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Spatie\LaravelPasskeys\Http\Components\AuthenticatePasskeyComponent;
@@ -51,8 +50,10 @@ class LaravelPasskeysServiceProvider extends PackageServiceProvider
     {
         Blade::component('authenticate-passkey', AuthenticatePasskeyComponent::class);
 
-        Livewire::component('passkeys', PasskeysComponent::class);
-
+        if (class_exists(\Livewire\Livewire::class))
+        {
+            \Livewire\Livewire::component('passkeys', PasskeysComponent::class);
+        }
         return $this;
     }
 }
