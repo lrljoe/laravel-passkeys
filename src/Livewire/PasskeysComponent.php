@@ -27,6 +27,8 @@ class PasskeysComponent extends Component
 
     public function validatePasskeyProperties(): void
     {
+        $this->validate();
+
         $this->dispatch('passkeyPropertiesValidated', [
             'passkeyOptions' => json_decode($this->generatePasskeyOptions()),
         ]);
@@ -47,7 +49,7 @@ class PasskeysComponent extends Component
         } catch (Throwable $e) {
             throw $e;
             throw ValidationException::withMessages([
-                'name' => 'Something went wrong generating the passkey.',
+                'name' => __('passkeys::passkeys.error_something_went_wrong_generating_the_passkey'),
             ])->errorBag('passkeyForm');
         }
 
