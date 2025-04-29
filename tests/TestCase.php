@@ -3,12 +3,12 @@
 namespace Spatie\LaravelPasskeys\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Encryption\Encrypter;
 use Illuminate\Support\Str;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Spatie\LaravelPasskeys\LaravelPasskeysServiceProvider;
 use Spatie\LaravelPasskeys\Tests\TestSupport\Models\User;
-use Illuminate\Encryption\Encrypter;
 
 class TestCase extends Orchestra
 {
