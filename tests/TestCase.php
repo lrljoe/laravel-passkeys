@@ -3,6 +3,7 @@
 namespace Spatie\LaravelPasskeys\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Encryption\Encrypter;
 use Illuminate\Support\Str;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
@@ -37,6 +38,7 @@ class TestCase extends Orchestra
         config()->set('database.default', 'testing');
         config()->set('auth.providers.users.model', User::class);
         config()->set('passkeys.models.authenticatable', User::class);
+        config()->set('app.key', Encrypter::generateKey(config('app.cipher')));
 
         $migration = include __DIR__.'/../vendor/orchestra/testbench-core/laravel/migrations/0001_01_01_000000_testbench_create_users_table.php';
         $migration->up();
