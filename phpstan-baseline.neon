@@ -1,21 +1,43 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Parameter \\$authenticatorAssertionResponse of method Webauthn\\\\AuthenticatorAssertionResponseValidator\\:\\:check\\(\\) expects Webauthn\\\\AuthenticatorAssertionResponse, Webauthn\\\\AuthenticatorResponse given\\.$#"
+			message: '#^Parameter \$authenticatorAssertionResponse of method Webauthn\\AuthenticatorAssertionResponseValidator\:\:check\(\) expects Webauthn\\AuthenticatorAssertionResponse, Webauthn\\AuthenticatorResponse given\.$#'
+			identifier: argument.type
 			count: 1
 			path: src/Actions/FindPasskeyToAuthenticateAction.php
 
 		-
-			message: "#^Negated boolean expression is always false\\.$#"
+			message: '#^Parameter \#1 \$view of function view expects view\-string\|null, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Http/Components/AuthenticatePasskeyComponent.php
+
+		-
+			message: '#^Negated boolean expression is always false\.$#'
+			identifier: booleanNot.alwaysFalse
 			count: 1
 			path: src/Http/Controllers/AuthenticateUsingPasskeyController.php
 
 		-
-			message: "#^Access to an undefined property Illuminate\\\\Contracts\\\\Auth\\\\Authenticatable&Spatie\\\\LaravelPasskeys\\\\Models\\\\Concerns\\\\HasPasskeys\\:\\:\\$passkeys\\.$#"
+			message: '#^Access to an undefined property Illuminate\\Contracts\\Auth\\Authenticatable&Spatie\\LaravelPasskeys\\Models\\Concerns\\HasPasskeys\:\:\$passkeys\.$#'
+			identifier: property.notFound
 			count: 1
 			path: src/Livewire/PasskeysComponent.php
 
 		-
-			message: "#^Parameter \\#1 \\$related of method Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:belongsTo\\(\\) expects class\\-string\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>, class\\-string\\<Illuminate\\\\Contracts\\\\Auth\\\\Authenticatable\\> given\\.$#"
+			message: '#^Parameter \#1 \$view of function view expects view\-string\|null, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Livewire/PasskeysComponent.php
+
+		-
+			message: '#^Trait Spatie\\LaravelPasskeys\\Models\\Concerns\\InteractsWithPasskeys is used zero times and is not analysed\.$#'
+			identifier: trait.unused
+			count: 1
+			path: src/Models/Concerns/InteractsWithPasskeys.php
+
+		-
+			message: '#^Parameter \#1 \$related of method Illuminate\\Database\\Eloquent\\Model\:\:belongsTo\(\) expects class\-string\<Illuminate\\Database\\Eloquent\\Model\>, class\-string\<Illuminate\\Contracts\\Auth\\Authenticatable\> given\.$#'
+			identifier: argument.type
 			count: 1
 			path: src/Models/Passkey.php
