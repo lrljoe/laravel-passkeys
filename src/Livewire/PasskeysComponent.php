@@ -47,7 +47,6 @@ class PasskeysComponent extends Component
                 ['name' => $this->name]
             );
         } catch (Throwable $e) {
-            throw $e;
             throw ValidationException::withMessages([
                 'name' => __('passkeys::passkeys.error_something_went_wrong_generating_the_passkey'),
             ])->errorBag('passkeyForm');

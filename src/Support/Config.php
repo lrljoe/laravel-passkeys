@@ -26,10 +26,11 @@ class Config
     }
 
     /**
-     * @return class-string<\Illuminate\Auth\Authenticatable>
+     * @return class-string<Authenticatable>
      */
     public static function getAuthenticatableModel(): string
     {
+        /** @var class-string<Authenticatable> $authenticatableModel */
         $authenticatableModel = config('passkeys.models.authenticatable');
 
         foreach ([Authenticatable::class, HasPasskeys::class] as $interface) {

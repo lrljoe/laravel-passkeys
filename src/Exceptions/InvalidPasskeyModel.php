@@ -11,6 +11,6 @@ class InvalidPasskeyModel extends Exception
     {
         $shouldExtend = Passkey::class;
 
-        return new static("The configured passkey model `{$configuredClass}` does not extend `{$shouldExtend}`.");
+        return new self("The configured passkey model `{$configuredClass}` does not extend `{$shouldExtend}`.");
     }
 }

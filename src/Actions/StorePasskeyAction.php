@@ -30,10 +30,13 @@ class StorePasskeyAction
             $hostName
         );
 
-        return $authenticatable->passkeys()->create([
+        /** @var Passkey $passkey */
+        $passkey = $authenticatable->passkeys()->create([
             ...$additionalProperties,
             'data' => $publicKeyCredentialSource,
         ]);
+
+        return $passkey;
     }
 
     protected function determinePublicKeyCredentialSource(

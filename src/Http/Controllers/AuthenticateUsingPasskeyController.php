@@ -33,6 +33,7 @@ class AuthenticateUsingPasskeyController
             return $this->invalidPasskeyResponse();
         }
 
+        /** @var Authenticatable $authenticatable */
         $authenticatable = $passkey->authenticatable;
 
         if (! $authenticatable) {

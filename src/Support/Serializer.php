@@ -8,12 +8,12 @@ use Webauthn\Denormalizer\WebauthnSerializerFactory;
 
 class Serializer
 {
-    public static function make()
+    public static function make(): self
     {
         $attestationStatementSupportManager = AttestationStatementSupportManager::create();
 
-        $serializer = (new WebauthnSerializerFactory($attestationStatementSupportManager))
-            ->create();
+        /** @var \Symfony\Component\Serializer\Serializer $serializer */
+        $serializer = (new WebauthnSerializerFactory($attestationStatementSupportManager))->create();
 
         return new self($serializer);
     }
@@ -28,7 +28,7 @@ class Serializer
     }
 
     /**
-     * @param  string<class-string>  $desiredClass
+     * @param  class-string $desiredClass
      */
     public function fromJson(string $value, string $desiredClass): mixed
     {

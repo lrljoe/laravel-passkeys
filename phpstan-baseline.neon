@@ -1,0 +1,21 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Parameter \\$authenticatorAssertionResponse of method Webauthn\\\\AuthenticatorAssertionResponseValidator\\:\\:check\\(\\) expects Webauthn\\\\AuthenticatorAssertionResponse, Webauthn\\\\AuthenticatorResponse given\\.$#"
+			count: 1
+			path: src/Actions/FindPasskeyToAuthenticateAction.php
+
+		-
+			message: "#^Negated boolean expression is always false\\.$#"
+			count: 1
+			path: src/Http/Controllers/AuthenticateUsingPasskeyController.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Contracts\\\\Auth\\\\Authenticatable&Spatie\\\\LaravelPasskeys\\\\Models\\\\Concerns\\\\HasPasskeys\\:\\:\\$passkeys\\.$#"
+			count: 1
+			path: src/Livewire/PasskeysComponent.php
+
+		-
+			message: "#^Parameter \\#1 \\$related of method Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:belongsTo\\(\\) expects class\\-string\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>, class\\-string\\<Illuminate\\\\Contracts\\\\Auth\\\\Authenticatable\\> given\\.$#"
+			count: 1
+			path: src/Models/Passkey.php

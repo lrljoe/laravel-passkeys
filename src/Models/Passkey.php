@@ -12,6 +12,9 @@ use Spatie\LaravelPasskeys\Support\Config;
 use Spatie\LaravelPasskeys\Support\Serializer;
 use Webauthn\PublicKeyCredentialSource;
 
+/**
+ * @property PublicKeyCredentialSource $data
+ */
 class Passkey extends Model
 {
     use HasFactory;
