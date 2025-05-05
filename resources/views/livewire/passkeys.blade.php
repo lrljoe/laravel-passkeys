@@ -37,7 +37,6 @@
             @endforeach
         </ul>
     </div>
-
-    @include('passkeys::livewire.partials.createScript')
 </div>
 
+@include('passkeys::livewire.partials.createScript')
