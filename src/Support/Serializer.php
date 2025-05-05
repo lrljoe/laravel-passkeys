@@ -28,7 +28,7 @@ class Serializer
     }
 
     /**
-     * @param  class-string $desiredClass
+     * @param  class-string  $desiredClass
      */
     public function fromJson(string $value, string $desiredClass): mixed
     {

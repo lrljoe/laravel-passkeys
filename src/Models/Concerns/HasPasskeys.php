@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * @mixin \Illuminate\Database\Eloquent\Model
+ *
  * @property \Illuminate\Support\Collection<\Spatie\LaravelPasskeys\Models\Passkey> $passkeys
  */
 interface HasPasskeys
