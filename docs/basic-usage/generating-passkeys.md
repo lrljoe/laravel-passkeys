@@ -1,5 +1,5 @@
 ---
-title: Creating passkeys
+title: Generating passkeys
 weight: 2
 ---
 

@@ -149,7 +149,7 @@ return [
 
 ## Next steps
 
-With this setup out of the way, you can now using the components provided by the package to [generate](TODO: add link) and [authenticate](TODO: add link) passkeys.
+With this setup out of the way, you can now using the components provided by the package to [generate passkeys](https://spatie.be/docs/laravel-passkeys/v1/basic-usage/generating-passkeys) and [authenticate using passkeys](https://spatie.be/docs/laravel-passkeys/v1/basic-usage/authenticating-using-passkeys).
 
 ### 8. Add the authentication component to the login view
 

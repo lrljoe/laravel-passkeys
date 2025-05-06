@@ -21,4 +21,4 @@ When logging using a passkey, your Laravel app will generate a challenge that yo
 
 ## Learning more
 
-You can learn more about how passkeys work [here](https://www.dashlane.com/blog/what-is-a-passkey-and-how-does-it-work). There's also this wonderful course on Laracasts about [how to implement passkeys in Laravel](TODO: add link).
+You can learn more about how passkeys work [here](https://www.dashlane.com/blog/what-is-a-passkey-and-how-does-it-work). There's also this wonderful course on Laracasts about [how to implement passkeys in Laravel](https://laracasts.com/series/add-passkeys-to-a-laravel-app).

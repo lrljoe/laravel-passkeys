@@ -21,38 +21,10 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 
 This package contains a Livewire component to generate passkeys. Make sure you have Livewire installed in your Laravel app.
 
-## Installation
+## Documentation
 
+All documentation is available [on our documentation site](https://spatie.be/docs/laravel-passkeys).
 
-
-## Usage
-
-There are two parts to using passkeys in your Laravel app: creating a passkey and authenticating using a passkey.
-
-### Creating a passkey
-
-
-
-### Authenticating using a passkey
-
-To let your users authenticate using a passkey, you can include the `authenticate-passkey` Blade component in your view, typically on your login view.
-
-```html 
-<x-authenticate-passkey />
-```
-
-// TODO: insert image
-
-This component will show a link that, when clicked, will start the passkey authentication process. 
-
-If the authentication is successful, the user will be redirected to the URL specified in the  `redirect_to_after_login` key of the `passkeys` config file.
-
-#### Customizing the look and feel of the component
-
-
-### Events
-
-The package fires the `Spatie\LaravelPasskeys\Events\PasskeyUsedToAuthenticateEvent` when a passkey is used to authenticate. It has a property `passkey` that contains the `Passkey` model that was used to authenticate, and `request` which contains the `AuthenticateUsingPasskeysRequest`.
 
 ## Testing
 

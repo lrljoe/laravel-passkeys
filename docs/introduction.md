@@ -19,6 +19,6 @@ And here's what logging in on Mailcoach using a passkeys looks like. Note that y
 
 ## Learning more
 
-You can learn more about how passkeys work [here](https://www.dashlane.com/blog/what-is-a-passkey-and-how-does-it-work). There's also this wonderful course on Laracasts about [how to implement passkeys in Laravel](TODO: add link).
+You can learn more about how passkeys work [here](https://www.dashlane.com/blog/what-is-a-passkey-and-how-does-it-work). There's also this wonderful course on Laracasts about [how to implement passkeys in Laravel](https://laracasts.com/series/add-passkeys-to-a-laravel-app).
 
 
