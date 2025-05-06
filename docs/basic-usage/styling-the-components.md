@@ -3,7 +3,7 @@ title: Styling the components
 weight: 4
 ---
 
-To customize the look and feel of the component, you can pass HTML to the component.
+The `authenticate-passkey` component can be styled and customized however you want, by passing HTML it's slot.
 
 ```html
 <x-authenticate-passkey>
@@ -11,8 +11,11 @@ To customize the look and feel of the component, you can pass HTML to the compon
 </x-authenticate-passkey>
 ```
 
-To customize where the user is redirected after a successful login, you can pass a URL to the `redirect` prop of the component.
+This will render a button that, when clicked, will start the passkey authentication process.
 
-```html
-<x-authenticate-passkey redirect="/dashboard" />
-```    
+All other styling can be done by publishing the package's views and modifying them as needed. You can publish the views using the following command:
+
+```bash
+php artisan vendor:publish --tag=passkeys-views
+```
+
