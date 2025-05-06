@@ -25,9 +25,7 @@ class Config
         return config('passkeys.models.passkey');
     }
 
-    /**
-     * @return class-string<Authenticatable>
-     */
+    /** @return class-string<Authenticatable> */
     public static function getAuthenticatableModel(): string
     {
         /** @var class-string<Authenticatable> $authenticatableModel */
@@ -57,6 +55,13 @@ class Config
         return config('passkeys.relying_party.icon');
     }
 
+    /**
+     * @template T
+     *
+     * @param string $actionName
+     * @param class-string<T> $actionBaseClass
+     * @return T
+     */
     public static function getActionClass(string $actionName, string $actionBaseClass): string
     {
         $actionClass = config("passkeys.actions.{$actionName}");
