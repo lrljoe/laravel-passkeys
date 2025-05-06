@@ -10,13 +10,13 @@ return [
     /*
      * These class are responsible for performing core tasks regarding passkeys.
      * You can customize them by creating a class that extends the default, and
-     * by specify your custom class name here
+     * by specifying your custom class name here.
      */
     'actions' => [
         'generate_passkey_register_options' => Spatie\LaravelPasskeys\Actions\GeneratePasskeyRegisterOptionsAction::class,
         'store_passkey' => Spatie\LaravelPasskeys\Actions\StorePasskeyAction::class,
         'generate_passkey_authentication_options' => \Spatie\LaravelPasskeys\Actions\GeneratePasskeyAuthenticationOptionsAction::class,
-        'find_passkey' => \Spatie\LaravelPasskeys\Actions\FindPasskeyToAuthenticateAction::class,
+        'find_passkey' => Spatie\LaravelPasskeys\Actions\FindPasskeyToAuthenticateAction::class,
     ],
 
     /*
@@ -30,6 +30,7 @@ return [
 
     /*
      * The models used by the package.
+     *
      * You can override this by specifying your own models
      */
     'models' => [

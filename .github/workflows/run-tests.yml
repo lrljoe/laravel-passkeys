@@ -9,6 +9,10 @@ on:
       - 'composer.json'
       - 'composer.lock'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -16,15 +20,8 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        php: [8.4, 8.3, 8.2]
-        laravel: [12.*, 11.*]
-        include:
-          - laravel: 12.*
-            testbench: 10.*
-            carbon: ^3.0
-          - laravel: 11.*
-            testbench: 9.*
-            carbon: ^2.63
+        php: [8.4]
+        laravel: [12]
 
     name: P${{ matrix.php }} - L${{ matrix.laravel }}
 
@@ -46,7 +43,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" "nesbot/carbon:${{ matrix.carbon }}" --no-interaction --no-update
+          composer require "laravel/framework:${{ matrix.laravel }}" --no-interaction --no-update
           composer update --prefer-dist --no-interaction
 
       - name: List Installed Dependencies
