@@ -14,6 +14,4 @@
 
         form.submit();
     }
-
-
 </script>

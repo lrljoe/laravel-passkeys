@@ -36,7 +36,6 @@ class PasskeysComponent extends Component
 
     public function storePasskey(string $passkey): void
     {
-        /** @var \Spatie\LaravelPasskeys\Actions\StorePasskeyAction $storePasskeyAction */
         $storePasskeyAction = Config::getAction('store_passkey', StorePasskeyAction::class);
 
         try {
@@ -75,7 +74,6 @@ class PasskeysComponent extends Component
 
     protected function generatePasskeyOptions(): string
     {
-        /** @var GeneratePasskeyRegisterOptionsAction $generatePassKeyOptionsAction */
         $generatePassKeyOptionsAction = Config::getAction('generate_passkey_register_options', GeneratePasskeyRegisterOptionsAction::class);
 
         $options = $generatePassKeyOptionsAction->execute($this->currentUser());

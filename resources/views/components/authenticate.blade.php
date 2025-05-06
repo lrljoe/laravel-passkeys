@@ -11,12 +11,6 @@
         </div>
     @endif
 
-   <!--
-    if (! browserSupportsWebAuthn()) {
-    return;
-    }
-   -->
-
     <div onclick="authenticateWithPasskey()">
         @if ($slot->isEmpty())
             <div class="underline cursor-pointer">

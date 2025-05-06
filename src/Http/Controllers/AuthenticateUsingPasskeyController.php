@@ -16,9 +16,6 @@ class AuthenticateUsingPasskeyController
 {
     public function __invoke(AuthenticateUsingPasskeysRequest $request)
     {
-        /**
-         * @var FindPasskeyToAuthenticateAction $findAuthenticatableUsingPasskey
-         */
         $findAuthenticatableUsingPasskey = Config::getAction(
             'find_passkey',
             FindPasskeyToAuthenticateAction::class
