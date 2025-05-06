@@ -55,7 +55,6 @@ class Config
         return config('passkeys.relying_party.icon');
     }
 
-
     public static function getActionClass(string $actionName, string $actionBaseClass): string
     {
         $actionClass = config("passkeys.actions.{$actionName}");
