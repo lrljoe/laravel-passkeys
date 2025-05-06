@@ -55,6 +55,13 @@ class Config
         return config('passkeys.relying_party.icon');
     }
 
+    /**
+     * @template T
+     *
+     * @param string $actionName
+     * @param class-string<T> $actionBaseClass
+     * @return class-string<T>
+     */
     public static function getActionClass(string $actionName, string $actionBaseClass): string
     {
         $actionClass = config("passkeys.actions.{$actionName}");
