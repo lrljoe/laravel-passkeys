@@ -13,7 +13,7 @@ class GeneratePasskeyAuthenticationOptionsAction
     {
         $options = new PublicKeyCredentialRequestOptions(
             challenge: Str::random(),
-            rpId: parse_url(config('app.url'), PHP_URL_HOST),
+            rpId: config('passkeys.relying_party.id'),
             allowCredentials: [],
         );
 
