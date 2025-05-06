@@ -7,11 +7,17 @@ Passkeys let you log in without needing a password. Instead of a password, you c
 
 Here's how it looks like when creating a passkey on [Mailcoach](https://mailcoach.app), which uses spatie/laravel-passkeys under the hood.
 
-[INSERT MOVIE]
+<video width="640" height="360" controls>
+  <source src="https://spatie.be/videos/passkeys/create-passkey.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 And here's what logging in on Mailcoach using a passkeys looks like. Note that your don't have to type in your email address or password. You just need to click the "Log in with passkey" and let 1Pass (or alternative app) do the rest.
 
-[INSERT MOVIE]
+<video width="640" height="360" controls>
+  <source src="https://spatie.be/videos/passkeys/use-passkey.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Under the hood
 
