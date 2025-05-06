@@ -58,8 +58,7 @@ class Config
     /**
      * @template T
      *
-     * @param string $actionName
-     * @param class-string<T> $actionBaseClass
+     * @param  class-string<T>  $actionBaseClass
      * @return class-string<T>
      */
     public static function getActionClass(string $actionName, string $actionBaseClass): string
