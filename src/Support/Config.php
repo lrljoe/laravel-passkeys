@@ -55,13 +55,7 @@ class Config
         return config('passkeys.relying_party.icon');
     }
 
-    /**
-     * @template T
-     *
-     * @param string $actionName
-     * @param class-string<T> $actionBaseClass
-     * @return T
-     */
+
     public static function getActionClass(string $actionName, string $actionBaseClass): string
     {
         $actionClass = config("passkeys.actions.{$actionName}");
@@ -71,6 +65,13 @@ class Config
         return config("passkeys.actions.{$actionName}");
     }
 
+    /**
+     * @template T
+     *
+     * @param string $actionName
+     * @param class-string<T> $actionBaseClass
+     * @return T
+     */
     public static function getAction(string $actionName, string $actionBaseClass)
     {
         $actionClass = self::getActionClass($actionName, $actionBaseClass);
