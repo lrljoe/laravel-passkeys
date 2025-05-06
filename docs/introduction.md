@@ -19,7 +19,7 @@ And here's what logging in on Mailcoach using a passkeys looks like. Note that y
 
 ## Demo application
 
-We've provided [a demo application](https://github.com/spatie/laravel-passkeys-app) that uses this package to log in users using passkeys. 
+We've provided [a demo application](https://github.com/spatie/laravel-passkeys-app) that uses this package to log in users using passkeys.
 
 ## Learning more
 

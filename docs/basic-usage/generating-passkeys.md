@@ -11,7 +11,13 @@ You can include this component in your views.
 <livewire:passkeys />
 ```
 
-Here's how the component looks like:
+Here's what the component looks like by default:
 
-// TODO: insert image
+![image](/docs/laravel-passkeys/v1/images/passkey-list.png)
+
+The layout is intentionally very basic, you can [style it](/docs/laravel-passkeys/v1/basic-usage/styling-the-components) as you like it yourself.
+
+When creating a passkey, your favorite password manager should kick in to save the passkey. 
+
+![image](/docs/laravel-passkeys/v1/images/save-passkey.png)
 

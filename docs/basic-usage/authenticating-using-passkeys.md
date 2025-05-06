@@ -3,15 +3,22 @@ title: Authentication using passkeys
 weight: 3
 ---
 
-To let your users authenticate using a passkey, you can include the `authenticate-passkey` Blade component in your view, typically on your login view.
+To let your users authenticate using a passkey, you can include the `authenticate-passkey` Blade component in your view, typically on your login view. 
+
 
 ```html 
 <x-authenticate-passkey />
 ```
 
-// TODO: insert image
+Here's what the component looks like by default:
+
+![image](/docs/laravel-passkeys/v1/images/login-link.png)
+
+The layout is intentionally very basic, you can [style it](/docs/laravel-passkeys/v1/basic-usage/styling-the-components) as you like it yourself.
 
 This component will show a link that, when clicked, will start the passkey authentication process.
+
+![image](/docs/laravel-passkeys/v1/images/passkey-offered.png)
 
 ## Redirection after login
 
