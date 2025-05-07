@@ -13,10 +13,6 @@ You can install the package via composer:
 composer require spatie/laravel-passkeys
 ```
 
-```bash
-composer require spatie/laravel-passkeys
-```
-
 ### Step 2: Add the package's interface and trait to your user model
 
 You must let your user model (or any model you use to authenticate) implement the `HasPasskeys` interface and use the  `InteractsWithPasskeys` trait.
