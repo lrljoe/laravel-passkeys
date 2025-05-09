@@ -90,7 +90,7 @@ class Config
         }
     }
 
-   public static function getRedirectAfterLogin(): ?string
+    public static function getRedirectAfterLogin(): ?string
     {
         return config('passkeys.redirect_to_after_login');
     }
