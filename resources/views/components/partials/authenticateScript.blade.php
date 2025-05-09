@@ -1,10 +1,8 @@
 <script>
     async function authenticateWithPasskey() {
-        const response = await fetch('{{ route('passkeys.authentication_options') }}')
+        const authenticationOptions = await fetch('{{ route('passkeys.authentication_options') }}').then((response) => response.json());
 
-        const options = await response.json();
-
-        const startAuthenticationResponse = await startAuthentication(options);
+        const startAuthenticationResponse = await startAuthentication({ optionsJSON: authenticationOptions,  });
 
         const form = document.getElementById('passkey-login-form');
 
