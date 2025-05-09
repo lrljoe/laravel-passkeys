@@ -10,7 +10,7 @@ To let your users authenticate using a passkey, you can include the `authenticat
 <x-authenticate-passkey />
 ```
 
-Make sure to add this component outside any form, as under the hood the component will render a form element itself.
+Make sure to add this component outside any form, as under the hood the component will render a form element of its own.
 
 Here's what the component looks like by default:
 
