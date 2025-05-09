@@ -32,7 +32,7 @@ class User extends Authenticatable implements HasPasskeys
 }
 ```
 
-### Step 4: Optionally set the `AUTH_MODEL` in your `.env` file
+### Step 3: Optionally set the `AUTH_MODEL` in your `.env` file
 
 You'll only need to do this if you're not using the default `User` model. If you're using a different model to authenticate, you must set the `AUTH_MODEL` in your `.env` file to the class name of the model that should be authenticated using passkeys.
 
@@ -92,9 +92,24 @@ The package offers a couple of routes to help generating and authentication pass
 Route::passkeys();
 ```
 
+This macro returns the following:
+```php
+Route::prefix('passkeys')->group(function () {
+    Route::get(
+        'authentication-options',
+        \Spatie\LaravelPasskeys\Http\Controllers\GeneratePasskeyAuthenticationOptionsController::class
+    )->name('passkeys.authentication_options');
+
+    Route::post(
+        'authenticate',
+        \Spatie\LaravelPasskeys\Http\Controllers\AuthenticateUsingPasskeyController::class
+    )->name('passkeys.login');
+});
+```
+
 ### Step 9: Optionally publish the config file
 
-Publishing the config file isn't required. You only need to do this to customize the package's behavior.
+Publishing the config file isn't required. You only need to do this to customize the package's behavior, for example, should you wish to override the default actions.
 
 ```bash
 php artisan vendor:publish --tag="passkeys-config"
@@ -147,19 +162,19 @@ return [
 
 With this setup out of the way, you can now using the components provided by the package to [generate passkeys](https://spatie.be/docs/laravel-passkeys/v1/basic-usage/generating-passkeys) and [authenticate using passkeys](https://spatie.be/docs/laravel-passkeys/v1/basic-usage/authenticating-using-passkeys).
 
-### 8. Add the authentication component to the login view
+### 10. Add the authentication component to the login view
 
 ```html
 <x-authenticate-passkey />
 ```
 
-### 9. Add the passkey management component to the profile view
+### 11. Add the passkey management component to the profile view
 
 ```html
 <livewire:passkeys />
 ```
 
-### 10. (Optional) Publish the views for custom styling
+### 12. (Optional) Publish the views for custom styling
 
 ```bash
 php artisan vendor:publish --tag="passkeys-views"
