@@ -4,7 +4,7 @@
 
         const options = await response.json();
 
-        const startAuthenticationResponse = await startAuthentication(options);
+        const startAuthenticationResponse = await startAuthentication({ optionsJSON: options, });
 
         const form = document.getElementById('passkey-login-form');
 
