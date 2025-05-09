@@ -34,12 +34,12 @@ class LaravelPasskeysServiceProvider extends PackageServiceProvider
             Route::prefix($prefix)->group(function () {
                 Route::get(
                     'authentication-options',
-                    GeneratePasskeyAuthenticationOptionsController::class
+                    [GeneratePasskeyAuthenticationOptionsController::class, '__invoke']
                 )->name('passkeys.authentication_options');
 
                 Route::post(
                     'authenticate',
-                    AuthenticateUsingPasskeyController::class
+                    [AuthenticateUsingPasskeyController::class, '__invoke']
                 )->name('passkeys.login');
             });
         });
