@@ -57,7 +57,7 @@ class AuthenticateUsingPasskeyController
     {
         $url = Session::has('passkeys.redirect')
             ? Session::pull('passkeys.redirect')
-            : config('passkeys.redirect_to_after_login');
+            : Config::getRedirectAfterLogin();
 
         return redirect($url);
     }
