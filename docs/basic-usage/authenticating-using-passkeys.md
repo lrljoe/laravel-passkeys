@@ -10,6 +10,8 @@ To let your users authenticate using a passkey, you can include the `authenticat
 <x-authenticate-passkey />
 ```
 
+Make sure to add this component outside any form, as under the hood the component will render a form element itself.
+
 Here's what the component looks like by default:
 
 ![image](/docs/laravel-passkeys/v1/images/login-link.png)
