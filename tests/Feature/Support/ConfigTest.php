@@ -1,10 +1,10 @@
 <?php
 
-use Spatie\LaravelPasskeys\Support\Config;
+use Spatie\LaravelPasskeys\Actions\FindPasskeyToAuthenticateAction;
+use Spatie\LaravelPasskeys\Actions\GeneratePasskeyAuthenticationOptionsAction;
 use Spatie\LaravelPasskeys\Actions\GeneratePasskeyRegisterOptionsAction;
 use Spatie\LaravelPasskeys\Actions\StorePasskeyAction;
-use Spatie\LaravelPasskeys\Actions\GeneratePasskeyAuthenticationOptionsAction;
-use Spatie\LaravelPasskeys\Actions\FindPasskeyToAuthenticateAction;
+use Spatie\LaravelPasskeys\Support\Config;
 
 it('can get the model classes', function () {
     expect(Config::getPassKeyModel())->not()->toBeNull();
