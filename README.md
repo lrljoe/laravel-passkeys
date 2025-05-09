@@ -1,9 +1,19 @@
-# Use passkeys in your Laravel app
+<div align="left">
+    <a href="https://spatie.be/open-source?utm_source=github&utm_medium=banner&utm_campaign=laravel-passkeys">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://spatie.be/packages/header/laravel-passkeys/html/dark.webp">
+        <img alt="Logo for laravel-pdf" src="https://spatie.be/packages/header/laravel-passkeys/html/light.webp" height="190">
+      </picture>
+    </a>
+
+<h1>Use passkeys in your Laravel app</h1>
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-passkeys.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-passkeys)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/spatie/laravel-passkeys/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/spatie/laravel-passkeys/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/spatie/laravel-passkeys/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/spatie/laravel-passkeys/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-passkeys.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-passkeys)
+    
+</div>
 
 Passkeys let you log in without needing a password. Instead of a password, you can generate a passkey which will be stored in 1Pass, MacOS' password app, or alternative app on your favourite OS.
 
