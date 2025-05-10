@@ -37,7 +37,7 @@ class PasskeysComponent extends Component
     public function storePasskey(string $passkey): void
     {
         $storePasskeyAction = Config::getAction('store_passkey', StorePasskeyAction::class);
- 
+
         try {
             $storePasskeyAction->execute(
                 $this->currentUser(),
